@@ -4,11 +4,11 @@
 //  Copyright © 2015-2018 ProcedureKit. All rights reserved.
 //
 
-#if SWIFT_PACKAGE
+#if canImport(UIKit)
 import ProcedureKit
 import Foundation
 import UIKit
-#endif
+
 
 /// A struct of the views which require autolayout constraints
 public struct AutolayoutViews {
@@ -118,3 +118,4 @@ open class SetChildViewControllerProcedure: UIBlockProcedure {
 }
 
 
+#endif

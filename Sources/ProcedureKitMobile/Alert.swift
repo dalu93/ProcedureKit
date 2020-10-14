@@ -4,6 +4,7 @@
 //  Copyright © 2015-2018 ProcedureKit. All rights reserved.
 //
 
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -202,5 +203,9 @@ open class AlertProcedure: Procedure {
         controller.addTextField(configurationHandler: configurationHandler)
     }
 }
-
-
+#else
+#if SWIFT_PACKAGE
+import ProcedureKit
+#endif
+open class AlertProcedure: Procedure {}
+#endif
